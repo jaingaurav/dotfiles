@@ -109,6 +109,32 @@ prompt_git() {
   fi
 }
 
+
+prompt_hg() {
+  local st rev branch
+
+  hg_summary=$(HGPLAIN=1 hg summary 2>&1)
+  if [[ $hg_summary =~ parent:[[:space:]]([-a-z0-9:]*)[[:space:]]([a-z]*) ]]; then
+    st=""
+    rev=$match[1]
+    branch=$match[2]
+    if [[ $hg_summary == *unknown* ]]; then
+      prompt_segment red black
+      st='±'
+    elif [[ $hg_summary == *modified* ]]; then
+      prompt_segment yellow black
+      st='±'
+    else
+      prompt_segment green black
+    fi
+    if [[ -z "$branch" ]]; then
+      echo -n "⭠ $rev" $st
+    else
+      echo -n "⭠ $branch" $st
+    fi
+  fi
+}
+
 # Dir: current working directory
 prompt_dir() {
   prompt_segment blue black '%~'
@@ -135,6 +161,7 @@ build_prompt() {
   prompt_context
   prompt_dir
   prompt_git
+  prompt_hg
   prompt_end
 }
 
