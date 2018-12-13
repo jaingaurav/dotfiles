@@ -118,4 +118,22 @@ set modelines=0
 set nomodeline
 
 " ================ Custom Settings ========================
+
+" Enable spell check
+set spell
+
+" Default to search over the full path
+let g:ctrlp_by_filename = 0
+
+" automatically save open sessions when you quit vim
+let g:session_autosave = 'yes'
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+" ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
