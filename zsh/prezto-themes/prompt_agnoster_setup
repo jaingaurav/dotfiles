@@ -114,7 +114,7 @@ prompt_hg() {
   local st rev branch
 
   hg_summary=$(HGPLAIN=1 hg summary 2>&1)
-  if [[ $hg_summary =~ parent:[[:space:]]([-a-z0-9:]*)[[:space:]]([a-z]*) ]]; then
+  if [[ $hg_summary =~ parent:[[:space:]]([-a-z0-9:]*)[[:space:]]([a-z0-9]*) ]]; then
     st=""
     rev=$match[1]
     branch=$match[2]
