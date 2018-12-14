@@ -55,3 +55,6 @@ map ,jT :CtrlP test<CR>
 "Cmd-Shift-(M)ethod - jump to a method (tag in current file)
 "Ctrl-m is not good - it overrides behavior of Enter
 nnoremap <silent> <D-M> :CtrlPBufTag<CR>
+
+" Limit how far up the directory chain CtrlP goes
+let g:ctrlp_root_markers = ['.ctrlp']
