@@ -135,5 +135,8 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" Expand the linue number gutter
+set numberwidth=5
+
 " ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
