@@ -138,5 +138,9 @@ nnoremap <space> za
 " Expand the linue number gutter
 set numberwidth=5
 
+" Highlight column 80
+set textwidth=80
+set colorcolumn=+1
+
 " ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
