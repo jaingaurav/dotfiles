@@ -144,3 +144,7 @@ set colorcolumn=+1
 
 " ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
+
+" Hightlight spelling errors in the terminal (has to be after local settings)
+highlight SpellBad cterm=underline
+highlight SpellBad ctermfg=red
