@@ -5,7 +5,7 @@ vim/view
 *un~
 vim/.netrwhist
 vim/tmp
-vim/spell
+vim/spell/*.spl
 vim/after/.vimrc.after
 vim/.vundles.local
 vim/.vundles.local.bak

@@ -122,6 +122,9 @@ set nomodeline
 " Enable spell check
 set spell
 
+" Silently rebuild spellfile binary in case it was changed outside of vim
+silent mkspell! ~/.vim/spell/en.utf-8.add
+
 " Default to search over the full path
 let g:ctrlp_by_filename = 0
 
@@ -132,10 +135,10 @@ let g:session_autosave = 'yes'
 set foldmethod=indent
 set foldlevel=99
 
-" Enable folding with the spacebar
+" Enable folding with the space bar
 nnoremap <space> za
 
-" Expand the linue number gutter
+" Expand the line number gutter
 set numberwidth=5
 
 " Highlight column 80
@@ -145,6 +148,6 @@ set colorcolumn=+1
 " ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
 
-" Hightlight spelling errors in the terminal (has to be after local settings)
+" Highlight spelling errors in the terminal (has to be after local settings)
 highlight SpellBad cterm=underline
 highlight SpellBad ctermfg=red
