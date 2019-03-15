@@ -1,0 +1,4 @@
+[defaults]
+diff = --noprefix --root .
+
+%include .hgrc.user
