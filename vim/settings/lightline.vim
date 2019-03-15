@@ -2,7 +2,8 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo', 'percent' ] ],
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
