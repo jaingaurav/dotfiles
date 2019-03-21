@@ -139,7 +139,7 @@ set foldlevel=99
 nnoremap <space> za
 
 " Expand the line number gutter
-set numberwidth=5
+set numberwidth=6
 
 " Highlight column 80
 set textwidth=80
