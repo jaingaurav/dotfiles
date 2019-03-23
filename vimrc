@@ -124,6 +124,11 @@ set spell
 
 " Silently rebuild spellfile binary in case it was changed outside of vim
 silent mkspell! ~/.vim/spell/en.utf-8.add
+" Add local spellfile customizations
+if filereadable(expand("~/.vim.spellfile.en.utf-8.add"))
+  set spellfile=~/.vim/spell/en.utf-8.add,~/.vim.spellfile.en.utf-8.add
+  silent mkspell! ~/.vim.spellfile.en.utf-8.add
+endif
 
 " Default to search over the full path
 let g:ctrlp_by_filename = 0
