@@ -2,9 +2,9 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'shortfilename', 'modified' ],
-      \             [ 'tagbar' ] ],
-      \   'right': [ [ 'lineinfo', 'percent' ] ],
+      \             [ 'fugitive', 'readonly', 'shortfilename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo', 'percent' ],
+      \              ['tagbar'] ],
       \ },
       \ 'inactive': {
       \   'left': [ [ 'filename'] ],
