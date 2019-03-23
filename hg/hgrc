@@ -1,4 +1,5 @@
 [defaults]
 diff = --noprefix --root .
+qdiff = --noprefix --root .
 
 %include .hgrc.user
