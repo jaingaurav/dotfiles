@@ -2,8 +2,12 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ],
+      \             [ 'tagbar' ] ],
       \   'right': [ [ 'lineinfo', 'percent' ] ],
+      \ },
+      \ 'component': {
+      \   'tagbar': '%{tagbar#currenttag("[%s]", "", "f")}',
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
