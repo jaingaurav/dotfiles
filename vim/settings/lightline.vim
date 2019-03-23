@@ -2,14 +2,19 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ],
+      \             [ 'fugitive', 'readonly', 'shortfilename', 'modified' ],
       \             [ 'tagbar' ] ],
       \   'right': [ [ 'lineinfo', 'percent' ] ],
+      \ },
+      \ 'inactive': {
+      \   'left': [ [ 'filename'] ],
+      \   'right': [],
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
       \   'readonly': 'MyReadonly',
       \   'filename': 'MyFilename',
+      \   'shortfilename': 'MyShortFilename',
       \   'tagbar': 'MyTag',
       \ },
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
@@ -39,7 +44,12 @@ function! MyTag()
 endfunction
 
 function! MyFilename()
-  let _ = MyReadonly() . MyFugitive() . expand('%') . MyTag()
+  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+       \ ('' != expand('%') ? expand('%') : '[NoName]')
+endfunction
+
+function! MyShortFilename()
+  let _ = MyReadonly() . MyFugitive() . MyFilename() . MyTag()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
        \ ('' != expand('%') ? ((winwidth(0) - strlen(_)) > 30 ? expand('%') : pathshorten(expand('%'))) : '[NoName]')
 endfunction
