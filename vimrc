@@ -145,6 +145,9 @@ set numberwidth=6
 set textwidth=80
 set colorcolumn=+1
 
+" Add shortcut to remove buffer but not loose split
+noremap <leader>c :enew<CR>:bwipeout #<CR>
+
 " ================ Local Settings ========================
 so ~/.yadr/vim/settings.vim
 
