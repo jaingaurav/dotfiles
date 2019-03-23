@@ -6,13 +6,11 @@ let g:lightline = {
       \             [ 'tagbar' ] ],
       \   'right': [ [ 'lineinfo', 'percent' ] ],
       \ },
-      \ 'component': {
-      \   'tagbar': '%{tagbar#currenttag("[%s]", "", "f")}',
-      \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
       \   'readonly': 'MyReadonly',
       \   'filename': 'MyFilename',
+      \   'tagbar': 'MyTag',
       \ },
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
@@ -36,9 +34,14 @@ function! MyFugitive()
   return ''
 endfunction
 
+function! MyTag()
+  return tagbar#currenttag("[%s]", "", "f")
+endfunction
+
 function! MyFilename()
+  let _ = MyReadonly() . MyFugitive() . expand('%') . MyTag()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-       \ ('' != expand('%') ? expand('%') : '[NoName]')
+       \ ('' != expand('%') ? ((winwidth(0) - strlen(_)) > 30 ? expand('%') : pathshorten(expand('%'))) : '[NoName]')
 endfunction
 
 " Use status bar even with single buffer
