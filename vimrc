@@ -147,7 +147,6 @@ nnoremap <space> za
 set numberwidth=6
 
 " Highlight column 80
-set textwidth=80
 set colorcolumn=+1
 
 " Add shortcut to remove buffer but not loose split
