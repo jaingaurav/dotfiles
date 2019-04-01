@@ -21,6 +21,7 @@ Bundle "gmarik/vundle"
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
 runtime languages.vundle
+runtime golang.vundle
 runtime git.vundle
 runtime hg.vundle
 runtime appearance.vundle
