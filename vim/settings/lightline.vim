@@ -3,8 +3,8 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'shortfilename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo', 'percent' ],
-      \              ['tagbar'] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'tagbar' ] ],
       \ },
       \ 'inactive': {
       \   'left': [ [ 'filename'] ],
