@@ -40,7 +40,7 @@ function! MyFugitive()
 endfunction
 
 function! MyTag()
-  return tagbar#currenttag("[%s]", "", "f")
+  return join(split(tagbar#currenttag("%s", "", "f"), ":")[-3:], ":")
 endfunction
 
 function! MyFilename()
