@@ -1,2 +1,49 @@
-ctrl
+" Companies
+Cohesity
+rubrik
+Rubrik
+
+" Software
+ansible
+Dockerfile
+gcloud
+Homebrew
+JDK
+js
+kubectl
+kubernetes
+MacVim
+minikube
+macOS
+NGINX
+OpenWhisk
+Phabricator
 spellfile
+TensorFlow
+virtualenv
+xhyve
+
+" Terminology
+backend
+cd
+ctrl
+config
+deps
+env
+Hostname
+linter
+linters
+localhost
+microservices
+os
+src
+submodule
+submodules
+url
+vm
+yaml
+yml
+
+" Names
+gjain
+gjn
