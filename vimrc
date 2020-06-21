@@ -135,6 +135,7 @@ let g:ctrlp_by_filename = 0
 
 " automatically save open sessions when you quit vim
 let g:session_autosave = 'yes'
+let g:session_directory = '~/.vim-sessions'
 
 " Enable folding
 set foldmethod=indent
