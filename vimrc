@@ -137,6 +137,9 @@ let g:ctrlp_by_filename = 0
 let g:session_autosave = 'yes'
 let g:session_directory = '~/.vim-sessions'
 
+" Default the syntastic python linter to use python 3
+let g:syntastic_python_python_exec = 'python3'
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
