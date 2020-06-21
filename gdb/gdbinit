@@ -1,0 +1,3 @@
+set filename-display absolute
+set print thread-events off
+set history save on
